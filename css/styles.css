@@ -80,6 +80,19 @@ img {
   margin: 0;
 }
 
+.visuaaly-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 /**
   |============================
   | Header section
@@ -523,7 +536,8 @@ color: #FFFFFF;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.social-links-title {
+.social-links-title,
+.footer-subscription-form-title {
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -533,6 +547,7 @@ color: #FFFFFF;
 
   color: #ffffff;
 }
+
 
 .social-link-footer {
   display: flex;
@@ -558,6 +573,63 @@ color: #FFFFFF;
   color: #ffffff;
   background-color: var(--acent-txt-cl);
 }
+
+.social-links {
+  margin-right: 93px;
+}
+
+.footer-subscription-form {
+
+  }
+
+.footer-subsubscription-form-group {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-subscription-form-input {
+min-width: 358px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 15px;
+  font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: calc(20 / 16);
+display: flex;
+align-items: center;
+letter-spacing: 0.03em;
+
+
+color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-subscription-form-btn {
+  display: flex;
+  gap: 10px;
+  align-items:center;
+  justify-content: center;
+  background-color: var(--acent-txt-cl);
+  border-radius: 4px;
+  border-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: calc(30 / 16);
+text-align: center;
+letter-spacing: 0.06em;
+padding-top: 10px;
+padding-right: 28px;
+padding-bottom: 10px;
+padding-left: 29px;
+cursor: pointer;
+
+color: #FFFFFF;
+  
+}
+
 
 /**
   |============================
@@ -718,21 +790,28 @@ transition: transform 300ms ease-in-out;
 
   .backdrop.is-hidden.modal {
     opacity: 0;
-  }
+  } 
+
+
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 528px;
-  height: 581px;
+  min-height: 581px;
   background-color: white;
   border-radius: 4px;
   position: relative;
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
   transition: transform 250ms ease-in-out 200ms, opacity 400ms ease-in-out 200ms;
+  padding-top: 40px;
+  padding-right: 41px;
+  padding-bottom: 40px;
+  padding-left: 39px;
 }
+
 
 .modal-btn {
   position: absolute;
@@ -754,4 +833,140 @@ transition: transform 300ms ease-in-out;
 .modal-btn-icon {
 width: 11px;
 height: 11px;
+}
+
+
+.register-form {
+text-align:center;
+}
+
+.register-form-title {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+font-size: 20px;
+line-height: calc(23px / 20px)
+text-align: center;
+letter-spacing: 0.03em;
+
+color: #212121;
+}
+
+.register-form-group {
+  margin-bottom: 20px;
+}
+
+.register-form-lable {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: 400;
+font-size: 12px;
+line-height: calc(14 / 12);
+letter-spacing: 0.01em;
+color: #757575;
+padding-left: 1px;
+}
+
+.register-form-wrap {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.register-form-icon {
+  position: absolute;
+  top: 29px;
+  left: 12px;
+}
+
+.register-form-wrap:last-child {
+  margin-bottom: 0;
+}
+
+.register-form-input,
+.register-form-message {
+  border: solid 1px #D9D9D9;
+  border-radius: 5px;
+  width: 100%;
+  outline: transparent;
+  padding: 10px;
+  padding-left: 50px;
+}
+
+.register-form-message {
+resize: none;
+height: 120px;
+padding: 10px;
+
+}
+
+textarea::placeholder{
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+letter-spacing: 0.01em;
+
+color: rgba(117, 117, 117, 0.5);
+}
+
+
+.register-form-agreement {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 30px;
+  padding-left: 13px;
+  
+}
+
+.register-form-agreement-text {
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: calc (24 / 14);
+letter-spacing: 0.03em;
+
+color: #757575;
+}
+
+.register-icon-uncheck {
+transition: opacity 300ms ease-in-out;
+
+}
+
+.register-icon-check {
+opacity: 0;
+transition: opacity 300ms ease-in-out;
+}
+
+.register-checkbox:checked + .register-icon .register-icon-uncheck {
+  opacity: 0;
+}
+
+.register-checkbox:checked + .register-icon .register-icon-check {
+  opacity: 1;
+}
+
+.register-form-agreement-link {
+  text-decoration: underline;
+  color:var(--acent-txt-cl);
+}
+
+.register-form-btn {
+  display: inline-block;
+  align-items: center;
+  padding: 10px 55px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: var(--acent-txt-cl);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
 }
