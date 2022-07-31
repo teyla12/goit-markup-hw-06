@@ -878,6 +878,9 @@ padding-left: 1px;
   position: absolute;
   top: 29px;
   left: 12px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0s;
 }
 
 .register-form-wrap:last-child {
@@ -892,14 +895,29 @@ padding-left: 1px;
   outline: transparent;
   padding: 10px;
   padding-left: 50px;
-}
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0s;
+  }
+
+
+
 
 .register-form-message {
 resize: none;
 height: 120px;
 padding: 10px;
-
 }
+
+.register-form-input:focus,
+.register-form-message:focus {
+  border: solid 1px var(--acent-txt-cl);
+    }
+
+.register-form-input:focus-within+.register-form-icon {
+  fill:var(--acent-txt-cl);
+}
+
 
 textarea::placeholder{
 font-style: normal;
@@ -915,9 +933,10 @@ color: rgba(117, 117, 117, 0.5);
 .register-form-agreement {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 9px;
   margin-bottom: 30px;
-  padding-left: 13px;
+  
   
 }
 
@@ -952,6 +971,7 @@ transition: opacity 300ms ease-in-out;
 .register-form-agreement-link {
   text-decoration: underline;
   color:var(--acent-txt-cl);
+   text-underline-position: under;
 }
 
 .register-form-btn {
