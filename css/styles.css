@@ -115,16 +115,16 @@ img {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.header-logo {
+  margin-right: 93px;
+}
+
 .color-1 {
   color: black;
 }
 
 .color-2 {
   color: white;
-}
-
-.logo {
-  margin-right: 93px;
 }
 
 .header-nav {
@@ -508,6 +508,7 @@ color: #FFFFFF;
 
 .foter-contacts {
   margin-right: 70px;
+  min-width: 231px;
 }
 
 .footer-items {
@@ -604,6 +605,7 @@ letter-spacing: 0.03em;
 color: rgba(255, 255, 255, 0.6);
 }
 
+
 .footer-subscription-form-btn {
   display: flex;
   gap: 10px;
@@ -622,11 +624,10 @@ letter-spacing: 0.06em;
 padding-top: 10px;
 padding-right: 28px;
 padding-bottom: 10px;
-padding-left: 29px;
+padding-left: 28px;
 cursor: pointer;
-
 color: #FFFFFF;
-  
+border: none;
 }
 
 
@@ -877,13 +878,17 @@ padding-left: 1px;
 
 .register-form-wrap {
   display: block;
-  position: relative;
   margin-bottom: 10px;
+  }
+
+.register-form-field {
+position: relative; 
 }
 
 .register-form-icon {
   position: absolute;
-  top: 29px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 12px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
